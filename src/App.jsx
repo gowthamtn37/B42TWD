@@ -26,7 +26,7 @@ function Msg({pic, name}) {
   return (
     <div>
       <img className="user-pic" src={pic} alt={name} />
-      <h1>Hello, <span className="user-name">{name}</span>😎🤩👌 </h1>
+      <h1>Hello, <span className="user-name">{name}</span>😎🤩👌🥳😈 </h1>
     </div>
   );
 }
