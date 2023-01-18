@@ -1,3 +1,5 @@
+import React from "react";
+import { useState } from "react";
 import "./App.css";
 
 let contact = [{name:"Asok",
@@ -17,6 +19,7 @@ export default function App() {
       { contact.map((user)=>(<Msg name={user.name} pic={user.pic}
         
         />))}
+      
         
     </div>
   );
@@ -25,8 +28,23 @@ export default function App() {
 function Msg({pic, name}) {
   return (
     <div>
+       <br /><br />
       <img className="user-pic" src={pic} alt={name} />
       <h1>Hello, <span className="user-name">{name}</span>😎🤩👌🥳😈 </h1>
+     
+      <Counter/>
     </div>
+    
   );
+}
+function Counter(){
+  const [Like, setLike] = useState(0);
+  const [Dislike, setDislike] = useState(0);
+
+  return(
+    <div>
+<button onClick={()=>setLike( Like + 1)}>👍 {Like}</button>
+<button onClick={()=>setDislike( Dislike + 1)}>👎 {Dislike}</button>
+    </div>
+  )
 }
